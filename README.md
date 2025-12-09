@@ -1,16 +1,22 @@
-# React + Vite
-
+🏦 Currency Converter (React + Vercel Serverless API)
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+A modern currency converter built with React, using Vercel Serverless Functions to securely handle the API key for CurrencyBeacon.
+The frontend communicates with backend functions instead of calling the API directly, keeping the API key hidden even when deployed.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Convert between any two global currencies
 
-## React Compiler
+Daily exchange rates
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Secure backend using Vercel's serverless functions
 
-## Expanding the ESLint configuration
+API key hidden through environment variables
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Clean React Context API state management
+
+Toast notifications for errors & loading states
+
+
+**LIVE DEMO**
+
+https://currencyconvertor-tawny.vercel.app/
