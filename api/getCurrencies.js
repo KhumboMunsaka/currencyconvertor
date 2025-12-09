@@ -1,5 +1,3 @@
-// /api/getCurrencies.js
-
 export default async function handler(req, res) {
   try {
     const API_KEY = process.env.CURRENCY_API_KEY;
@@ -21,7 +19,11 @@ export default async function handler(req, res) {
 
     const data = await response.json();
 
-    const currencies = Object.keys(data.rates);
+    const currencies = Object.keys(data.rates).map((code) => ({
+      id: code,
+      short_code: code,
+      name: code,
+    }));
 
     res.status(200).json(currencies);
   } catch (error) {
