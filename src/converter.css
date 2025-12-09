@@ -1,0 +1,258 @@
+/* GENERAL LAYOUT */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.app {
+  padding: 40px;
+  background: #ffffff;
+  color: #111;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #555;
+  font-size: 14px;
+}
+
+.status {
+  background: #e8fbea;
+  border: 1px solid #a9e8b3;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: default;
+  font-size: 12px;
+}
+
+/* MAIN CONVERTER BOX */
+.converter-box {
+  margin-top: 40px;
+  background: #fafafa;
+  padding: 40px;
+  border-radius: 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.left-panel {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.input-group label {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 6px;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  font-size: 16px;
+}
+
+.select-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 0 12px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.select-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background: #fff;
+  padding: 0 12px;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.select-box:hover {
+  border-color: #5b3df6;
+  box-shadow: 0 0 6px rgba(91, 61, 246, 0.3);
+}
+
+.select-box select {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  padding: 12px 0;
+  width: 100%;
+  cursor: pointer;
+}
+.select-box img.flag {
+  margin-left: 8px;
+  border-radius: 3px;
+}
+
+/* Style the dropdown options in Chrome/Edge/Firefox */
+select option {
+  padding: 80px 12px;
+  background: #fff;
+  color: #111;
+}
+
+/* Hover for options (works in most browsers) */
+select option:hover {
+  background: #f0f0f0;
+  color: #111;
+}
+
+/* Focus state */
+select:focus {
+  outline: none;
+  border-color: #5b3df6;
+  box-shadow: 0 0 6px rgba(91, 61, 246, 0.3);
+}
+
+.swap-row {
+  display: flex;
+  justify-content: end;
+}
+
+.swap-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 12px;
+  border: none;
+  font-weight: bold;
+  background: linear-gradient(135deg, #5b3df6, #8e63f7);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(91, 61, 246, 0.4);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow animation on hover */
+.swap-btn:hover {
+  box-shadow: 0 0 20px rgba(91, 61, 246, 0.6), 0 4px 12px rgba(91, 61, 246, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Optional: subtle moving gradient aura */
+.swap-btn::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(91, 61, 246, 0.3) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  border-radius: 12px;
+}
+
+.swap-btn:hover::before {
+  opacity: 1;
+}
+
+.convert-btn {
+  padding: 16px;
+  background: #5b3df6;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* RIGHT PANEL RESULT BOX */
+.right-panel {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  background: #5b3df6;
+  padding: 35px;
+  border-radius: 18px;
+  color: white;
+  width: 40%;
+}
+
+.result-main {
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.result-amount {
+  font-size: 36px;
+  margin: 10px 0 20px;
+}
+
+.rate {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.powered {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 50px;
+  outline: none;
+  display: flex;
+  justify-content: end;
+  font-size: 13px;
+  color: #777;
+}
+
+@media screen and (max-width: 780px) {
+  .converter-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .right-panel {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .left-panel {
+    width: 100%;
+  }
+}
