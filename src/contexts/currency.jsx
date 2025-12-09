@@ -13,7 +13,7 @@ function CurrencyProvider({ children }) {
   useEffect(function () {
     async function getCurrencies() {
       setIsLoading(true);
-      const response = await fetch(`"/api/getCurrencies"`);
+      const response = await fetch("/api/getCurrencies");
       if (!response.ok) {
         toast.error("Could not load currencies");
         setIsLoading(false);
